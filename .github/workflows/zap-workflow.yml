@@ -12,9 +12,10 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: master
+          fetch-depth: 0
       - name: ZAP Scan
         uses: zaproxy/action-baseline@v0.14.0
         with:
-          target: 'https://juice-shop.github.io'
+          target: 'https://prashngen-dev.accenture.com'
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a'
